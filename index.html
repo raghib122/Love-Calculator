@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="hand.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <div class="clearfix">
+            <div class="calc col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+                <h2><span>&#9829;</span> Love Calculator <span>&#9829;</span></h2>
+                <h5>Input two people's names to calculate the love...</h5>
+                <form role="form" class="form-horizontal">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="father" placeholder="Partener Name" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="mother" placeholder="Partener Name" />
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-danger pull-right" type="submit" id="submit">Calculate</button>
+                    </div>
+                </form>
+                <p id="warning" class="text-danger"></p>
+                <h1 id="result" class="text-center"></h1>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
