@@ -1,0 +1,66 @@
+/* .calc {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	padding:20px 50px;
+	border:5px solid #AB6C6C;
+	background-color: #BB9898;
+	clear: both;
+}
+#result {
+	color: rgb(202, 58, 58);
+  font-size: 85px;
+  text-shadow: 1px 1px 1px #646161;
+	height: 150px;
+}  */
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Satisfy&display=swap');
+
+body{
+    background: rgb(238,174,213);
+    background: radial-gradient(circle, rgba(238,174,213,1) 32%, rgba(148,187,233,1) 100%); 
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: auto;
+    height: 416px;
+    width: 394px;
+    border: 2px solid palevioletred;
+    background-color: lightpink;
+
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 10px;
+    margin: 8px 0;
+    border: 2px solid pink;
+    border-radius: 4px;
+    color: red;
+    font-size: 20px;
+    font-family: 'Cedarville Cursive', cursive;
+    font-family: 'Satisfy', cursive;
+}
+
+#submit {
+    background-color: rgb(175, 19, 19);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Cedarville Cursive', cursive;
+    font-family: 'Satisfy', cursive;
+    color: rgb(255, 103, 128);
+}
+h5{
+    color: aqua;
+}
