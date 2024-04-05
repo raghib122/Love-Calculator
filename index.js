@@ -1,4 +1,32 @@
 function calculateLovePercentage(name1, name2) {
+    // Define pairs with fixed percentages
+    var fixedPairs = {
+        "john": {
+            "jane": 90 // Example: John and Jane always have 90%
+        },
+        "alice": {
+            "bob": 80 // Example: Alice and Bob always have 80%
+        },
+        "pramila": {
+            "raghib": 99 // Example: Alice and Bob always have 80%
+        },
+        "raghib": {
+            "pramila": 99 // Example: Alice and Bob always have 80%
+        },
+        "arish": {
+            "zoya": 99 // Example: Alice and Bob always have 80%
+        },
+        "raghib zaman": {
+            "pramila tamang": 99 // Example: Alice and Bob always have 80%
+        }
+        // Add more pairs as needed
+    };
+
+    // Check if the pair is in the fixedPairs list
+    if (fixedPairs[name1] && fixedPairs[name1][name2]) {
+        return fixedPairs[name1][name2] + "%"; // Return the fixed percentage
+    }
+
     var loves = ["l", "o", "v", "e", "s"],
         countArray = [],
         count,
@@ -40,12 +68,8 @@ function love(array) {
         });
         return love(hold);
     } else {
-        var lovePercentage = array[0] + "" + array[1];
-        if (lovePercentage <= 50) {
-            lovePercentage = Math.floor(Math.random() * (100 - 51 + 1) + 51); // Randomize percentage above 50%
-        }
-        lovePercentage += "%";
-        return lovePercentage;
+        var lovePercentage = (array[0] * 10) + array[1]; // Calculate percentage based on counts
+        return lovePercentage + "%";
     }
 }
 
@@ -53,20 +77,10 @@ document.getElementById('submit').addEventListener('click', function(e) {
     e.preventDefault();
     var fatherName = document.getElementsByName('father')[0].value.toLowerCase();
     var motherName = document.getElementsByName('mother')[0].value.toLowerCase();
-    var myName = "me";
 
     if (fatherName && motherName) {
-        if (
-            (fatherName === "father" && motherName === myName) ||
-            (fatherName === myName && motherName === "father") ||
-            (motherName === "mother" && fatherName === myName) ||
-            (motherName === myName && fatherName === "mother")
-        ) {
-            document.getElementById('result').textContent = "100%";
-        } else {
-            var lovePercentage = calculateLovePercentage(fatherName, motherName);
-            document.getElementById('result').textContent = lovePercentage;
-        }
+        var lovePercentage = calculateLovePercentage(fatherName, motherName);
+        document.getElementById('result').textContent = lovePercentage;
     } else {
         document.getElementById('warning').textContent = "Please enter both Partner names.";
     }
